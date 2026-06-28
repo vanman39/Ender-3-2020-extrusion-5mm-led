@@ -1,0 +1,62 @@
+#include "DHT.h"
+
+#define DHTPIN A0 
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+#include "SevSeg.h"
+// Display 1 pins (8 pins)
+int d1_pins[] = {4, 5, 8, 7, 6, 3, 2, 9};
+// Display 2 pins (8 pins)
+int d2_pins[] = {12, 13, A3, A2, A1, 11, 10, A4};
+
+
+byte digitMap[10][8] = {
+  {0,0,0,0,0,0,1,1}, // 0
+  {1,0,0,1,1,1,1,1}, // 1
+  {0,0,1,0,0,1,0,1}, // 2
+  {0,0,0,0,1,1,0,1}, // 3
+  {1,0,0,1,1,0,0,1}, // 4
+  {0,1,0,0,1,0,0,1}, // 5
+  {0,1,0,0,0,0,0,1}, // 6
+  {0,0,0,1,1,1,1,1}, // 7
+  {0,0,0,0,0,0,0,1}, // 8
+  {0,0,0,0,1,0,0,1}  // 9
+};
+
+SevSeg sevseg; 
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+  for(int i = 0; i < 8; i++) {
+    pinMode(d1_pins[i], OUTPUT);
+    digitalWrite(d1_pins[i], HIGH);
+    pinMode(d2_pins[i], OUTPUT);
+    digitalWrite(d2_pins[i], HIGH);
+  }
+  
+}
+
+void showNumber(int displayNum, int number) {
+  int* targetPins = (displayNum == 1) ? d1_pins : d2_pins;
+  for(int s = 0; s < 8; s++) { 
+    digitalWrite(targetPins[s], digitMap[number][s]);
+  }
+}
+
+
+
+void loop() {
+  float h = dht.readHumidity();
+  if (!isnan(h)) {
+    int humidityInt = (int)h;
+    int tens = humidityInt / 10;
+    int ones = humidityInt % 10;
+
+    showNumber(1, tens);
+    showNumber(2, ones);
+    Serial.print(h);
+    Serial.print("\n");
+  }
+  
+  delay(2000);
+}
