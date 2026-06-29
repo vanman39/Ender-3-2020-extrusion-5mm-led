@@ -18,6 +18,6 @@ list of materials
 
 \-2 7 seg led displays
 
-\2 170 pin breadboards
+-2 170 pin breadboards
 
-\optional 3d printed hardware
+-optional 3d printed hardware
