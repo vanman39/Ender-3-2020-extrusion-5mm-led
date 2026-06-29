@@ -4,7 +4,7 @@ This is an led set for 5mm leds and esp32 and humidity sensor.
 
 list of materials
 
-\-1 tactile button
+\-1 3 pin switch 
 
 \-15 5mm leds (i chose white)
 
@@ -18,3 +18,6 @@ list of materials
 
 \-2 7 seg led displays
 
+\2 170 pin breadboards
+
+\optional 3d printed hardware
