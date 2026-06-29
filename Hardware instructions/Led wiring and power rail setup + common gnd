@@ -1,0 +1,4 @@
+For this led you will need your 15 5mm leds, lots of wires, your switch, and a breadboard rail and a 220 resistor.
+You will send a 5v to the middle switch pin and make it flip the power on and off and then take on side of the 3 pin to your 'hot' power rail
+The 220 resistor then comes into play inside the 5v 'hot' rail before the led wires you wire off and adter the main power in
+Then each led gets its own jumper into the 5v rail and the gnd into the other rail and then wire the gnd rail to the uno's gnd pin
