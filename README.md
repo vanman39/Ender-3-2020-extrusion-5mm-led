@@ -1,4 +1,4 @@
-This is an led set for 5mm leds and esp32 and humidity sensor.
+This is an led set for 5mm leds and esp32 and humidity sensor on the top extrusion bar of an ender 3 pro and on the top of the side vertical psu
 
 
 
