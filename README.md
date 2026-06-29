@@ -16,10 +16,12 @@ list of materials
 
 \-1 dht11 humidity sensor
 
-\-2 7 seg led displays
+\-2 10 pin 7 seg led displays
 
 -2 170 pin breadboards
 
 -optional 3d printed hardware
 
 note: all parts are made with pla filament and all hardware is trying to be completely 3d printed.
+
+ALL code is in c++ using the arduino ide with the uno boards set and the libraries SevSeg and adafruit dht library.
