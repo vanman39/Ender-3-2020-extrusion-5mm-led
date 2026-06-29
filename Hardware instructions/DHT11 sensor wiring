@@ -1,0 +1,2 @@
+You will wire a 5v pin from the uno to the dht11 sensor and the gnd to the breadboard rail.
+If you are copying my code exactly wire the signal pin for the sensor to the a0 pin.
