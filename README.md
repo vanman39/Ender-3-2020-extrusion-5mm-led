@@ -18,6 +18,8 @@ list of materials
 
 \-2 10 pin 7 seg led displays
 
+-1 430 pin breadboard rail (I harvested a rail from an old breadboard)
+
 -2 170 pin breadboards
 
 -optional 3d printed hardware
