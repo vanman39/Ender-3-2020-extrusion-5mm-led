@@ -1,0 +1,9 @@
+I trimmed 16 220 resistors and put them in a line on a breadboard and connected each one going down to a corresponding arduino uno pin 
+i went down the pin lines adding d2-d13 to the first and then a1-a4 for the final pins.
+My 7 segement displays are Common Athode so I wired the pins 3 and 8 into my main 5v pins on the uno
+Then I went left to right on the top with d2, d3, d4, d5
+Then to the bottom left to right d6, d7, d8, d9
+NOTE: all data pins go through a channel on the 170 pin breadboard of one of 16 resistors
+Then I repeated the same thing for the second display with top left to rught d10, d11, d12, d13
+Then bottom left to right was a1, a2, a3, a4
+Note: the codebase.txt is in c++ and has this exact wiring set built.
